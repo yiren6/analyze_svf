@@ -3,9 +3,9 @@ analyze_svf is an automated program developed in MATLAB for analyzing sooting im
 
 ## Installation
 1. Install MATLAB on your computer.
-2. Clone or download the CornellSVF repository from Github.
+2. Clone or download the analyze_svf repository from Github.
 3. Open MATLAB and navigate to the folder where the repository and image data is located. 
-4. Run the program by typing CornellSVF in the MATLAB command window.
+4. Run the program by typing analyze_svf in the MATLAB command window.
 
 ## Usage
 1. Load the original image and the attenuated image when prompted. The program will automatically convert the images to grayscale intensity matrices with an 8-bit unsigned integer.
@@ -16,13 +16,13 @@ analyze_svf is an automated program developed in MATLAB for analyzing sooting im
 6. The program will extract the soot volume fraction for each ROI and output the results.
 
 ## Dependencies
-CornellSVF uses the following MATLAB toolboxes and functions:
+analyze_svf uses the following MATLAB toolboxes and functions:
 Image Processing Toolbox: imfindcircles.m and improfile.m
 Financial Toolbox: tsmovavg.m
 
 ## References
-If using CornellSVF in your research, please cite the following paper:
-
+If using analyze_svf in your research, please cite the following paper:
+Y. Xu, Y. Shen, C.T. Avedisian, M.C. Hicks, M.Y. Choi, Quantitative Investigation of Sooting Dynamics in Droplet Combustion Using Automated Image Analysis Algorithms, Fuel, 2023, Under review
 [Insert reference to the paper associated with the program here]
 
 ## License
