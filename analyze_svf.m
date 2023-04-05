@@ -12,7 +12,7 @@
 % of analysis angle by doing two mouse input, start and end accordingly.
 % The program separates the input range equally with spokes and obtain
 % the intensity of both original image and attenuated image. The
-% intensity profiles are sent to ?CornellAbel.m? to calculate the SVF using
+% intensity profiles are sent to ?calAbel.m? to calculate the SVF using
 % three-point Abel inversion. The results are stored into a matrix and
 % could be exported for further analysis. 
 %
@@ -20,9 +20,13 @@
 % document with SVF value through each spokes.
 %
 %
-%                       2017 Cornell University
-% (c) Yuhao Xu, Yiren Shen, C. Thomas Avedisianb, Michael C. Hicksc, Mun Y. Choid
-% - Contact Authors: yrshen@stanford.edu
+%                       2023 Cornell University
+% (c) Yuhao Xu, Yiren Shen, C. Thomas Avedisian, Michael C. Hicks, Mun Y. Choi
+% If using analyze_svf in your research, please cite the following paper: 
+% Y. Xu, Y. Shen, C.T. Avedisian, M.C. Hicks, M.Y. Choi, Quantitative Investigation of
+% Sooting Dynamics in Droplet Combustion Using Automated Image Analysis Algorithms, Fuel, 2023
+%
+% For user support and report of bugs, contact ys672 at cornell.edu 
 %*******************************************************************
  
 close all
@@ -149,7 +153,7 @@ if SpoksNumber==1
     %                   T = I/I0 = exp[-u*L]
     % the field distribution of Soot Volume Fraction (P_fv) is described as:
     %                   P_fv = -(lamda/Ke)*ln(I/I0)
-    % with three-point Abel inversion (funciton ?CornellAbel?), final soot
+    % with three-point Abel inversion (funciton ?calAbel?), final soot
     % volume fraction (sootintensity) is obtained. 
     sootimgprofile=improfile(sootimg,linearrayx2,linearrayy2);
     sootimgprofile=tsmovavg(sootimgprofile,'s',4,1);
@@ -158,7 +162,7 @@ if SpoksNumber==1
     sootprofile=sootimgprofile./originalprofile;    % I/I0
     P_fv=-(653*10^(-9)/8.6)*log(sootprofile);       % P_fv 
     P_fv(1:5)=0;
-    sootintensity=CornellAbel(P_fv,calibration);    % Abel inversion
+    sootintensity=calAbel(P_fv,calibration);    % Abel inversion
    
     dist=0:1:(length(sootintensity)-1);
     dist=dist*calibration;
@@ -293,7 +297,7 @@ else
     % the integration of the field distribution of Soot Volume Fraction (P_fv) 
     % is described as:
     %                   P_fv = -(lamda/Ke)*ln(I/I0)
-    % with three-point Abel inversion (function ?CornellAbel?), final soot
+    % with three-point Abel inversion (function ?calAbel?), final soot
     % volume fraction (sootintensity) is obtained. 
     for alpha=1:(2*SpoksNumber)
         
@@ -308,7 +312,7 @@ else
             sootprofile=sootimgprofile./originalprofile;    % I/I0
             P_fv=-(653*10^(-9)/8.6)*log(sootprofile);       % P_fv 
             P_fv(1:5)=0;
-            sootintensity=CornellAbel(P_fv,calibration);         % Abel inversion
+            sootintensity=calAbel(P_fv,calibration);         % Abel inversion
  
             dist=0:1:(length(sootintensity)-1);
             dist1=dist/rOrig;
@@ -458,9 +462,9 @@ dlmwrite(strcat(num2str(imgfiles(n)),'(averaged profiles).csv'),selection);
 %
 
 
-function SVF=CornellAbel(P,calibration)
-    % The MATLAB code of ?CornellAbel? is provided below.
-    % CornellAbel.m
+function SVF=calAbel(P,calibration)
+    % The MATLAB code of ?calAbel? is provided below.
+    % calAbel.m
     %
     % The code is designed to obtain the Soot Volume Fraction(SVF) through
     % three-point Abel inversion. The mathematical technique is recommended by
