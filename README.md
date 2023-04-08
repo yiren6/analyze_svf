@@ -23,7 +23,6 @@ Financial Toolbox: tsmovavg.m
 ## References
 If using analyze_svf in your research, please cite the following paper:
 Y. Xu, Y. Shen, C.T. Avedisian, M.C. Hicks, M.Y. Choi, Quantitative Investigation of Sooting Dynamics in Droplet Combustion Using Automated Image Analysis Algorithms, Fuel, 2023, Under review
-[Insert reference to the paper associated with the program here]
 
 ## License
 MIT license
