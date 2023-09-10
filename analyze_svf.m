@@ -20,13 +20,16 @@
 % document with SVF value through each spokes.
 %
 %
-%                       2023 Cornell University
-% (c) Yuhao Xu, Yiren Shen, C. Thomas Avedisian, Michael C. Hicks, Mun Y. Choi
-% If using analyze_svf in your research, please cite the following paper: 
-% Y. Xu, Y. Shen, C.T. Avedisian, M.C. Hicks, M.Y. Choi, Quantitative Investigation of
-% Sooting Dynamics in Droplet Combustion Using Automated Image Analysis Algorithms, Fuel, 2023
+%                      (C) 2023 Cornell University
+% 
+% ------------- MIT licensed
+% You're welcome to use this code in your research, please cite the following paper:
+% Y. Xu, Y. Shen, C.T. Avedisian, M.C. Hicks, M.Y. Choi, 
+% Quantitative Investigation of Sooting Dynamics in Droplet Combustion 
+% Using An Automated Image Analysis Algorithm, Fuel, 2023, 354: 129313.
+% https://doi.org/10.1016/j.fuel.2023.129313.
 %
-% For user support and report of bugs, contact ys672 at cornell.edu 
+% For user support and report of bugs, contact yrshen at stanford.edu
 %*******************************************************************
  
 close all
