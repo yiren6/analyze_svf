@@ -21,8 +21,8 @@ Image Processing Toolbox: imfindcircles.m and improfile.m
 Financial Toolbox: tsmovavg.m
 
 ## References
-If using analyze_svf in your research, please cite the following paper:
-Y. Xu, Y. Shen, C.T. Avedisian, M.C. Hicks, M.Y. Choi, Quantitative Investigation of Sooting Dynamics in Droplet Combustion Using Automated Image Analysis Algorithms, Fuel, 2023, Under review
+If using analyze_svf in your research, please cite the following paper: 
+Y. Xu, Y. Shen, C.T. Avedisian, M.C. Hicks, M.Y. Choi, Quantitative Investigation of Sooting Dynamics in Droplet Combustion Using An Automated Image Analysis Algorithm, Fuel, 2023, 354: 129313. https://doi.org/10.1016/j.fuel.2023.129313.
 
 ## License
 MIT license
